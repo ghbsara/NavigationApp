@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Root: Decodable {
+class Root: Decodable {
     
     // MARK: - Properties
     

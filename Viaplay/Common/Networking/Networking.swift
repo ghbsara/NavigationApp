@@ -10,8 +10,13 @@ import Foundation
 
 class Networking {
     
-    static func fetchData(url: URL, completionHandler: @escaping (_ data: Data?,_ error: Error?) -> Void) {
-                
+    // Fetch data using the url string
+    static func fetchData(urlString: String, completionHandler: @escaping (_ data: Data?,_ error: Error?) -> Void) {
+         
+        guard let url = URL(string: urlString) else {
+            return completionHandler(nil, nil)
+        }
+        
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             completionHandler(data, error)
         }

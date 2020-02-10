@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Link: Decodable {
+class Link: Decodable {
     
     // MARK: - Properties
     
