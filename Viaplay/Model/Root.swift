@@ -22,7 +22,7 @@ class Root: Decodable {
     
     // MARK: - Init
     
-    init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
