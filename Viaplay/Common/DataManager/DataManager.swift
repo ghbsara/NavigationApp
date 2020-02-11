@@ -28,4 +28,21 @@ class DataManager {
             }
         }
     }
+    
+    func getSectionDetail(sectionURL: String, completionHandler: @escaping (_ section: SectionDetail?) -> Void) {
+        
+        Networking.fetchData(urlString: sectionURL) { (data, error) in
+            guard let data = data else {
+                return completionHandler(nil)
+            }
+            
+            do {
+                let sectionDetail = try JSONDecoder().decode(SectionDetail.self, from: data)
+                completionHandler(sectionDetail)
+            } catch {
+               print("error")
+               completionHandler(nil)
+            }
+        }
+    }
 }

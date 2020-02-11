@@ -1,26 +1,25 @@
 //
-//  Section.swift
+//  SectionDetail.swift
 //  Viaplay
 //
-//  Created by Sara Gharib on 2/10/20.
+//  Created by Sara Gharib on 2/11/20.
 //  Copyright © 2020 Sara Gharib. All rights reserved.
 //
 
 import Foundation
 
-class Section: Decodable {
+class SectionDetail: Decodable {
     
     // MARK: - Properties
     
     let title: String?
-    let urlString: String?
-    var sectionDetail: SectionDetail?
+    let description: String?
     
     // MARK: - CodingKeys
     
     enum CodingKeys: String, CodingKey {
-        case urlString = "href"
         case title
+        case description
     }
     
     // MARK: - Init
@@ -30,6 +29,6 @@ class Section: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         title = try container.decode(String.self, forKey: .title)
-        urlString = try container.decode(String.self, forKey: .urlString)
+        description = try container.decode(String.self, forKey: .description)
     }
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98B4505023F1616E008E81C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4504423F1616E008E81C6 /* ViewController.swift */; };
 		98B4505123F1616E008E81C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B4504723F1616E008E81C6 /* LaunchScreen.storyboard */; };
 		98B4505223F1616E008E81C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B4504823F1616E008E81C6 /* Main.storyboard */; };
 		98B4505323F1616E008E81C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4504B23F1616E008E81C6 /* AppDelegate.swift */; };
@@ -19,11 +18,15 @@
 		98B4506623F19A7E008E81C6 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4506523F19A7E008E81C6 /* Link.swift */; };
 		98B4506823F19BA9008E81C6 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4506723F19BA9008E81C6 /* Root.swift */; };
 		98B4506B23F1B1EF008E81C6 /* Constant+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4506A23F1B1EF008E81C6 /* Constant+URL.swift */; };
+		98B4506F23F1B48F008E81C6 /* SectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4506E23F1B48F008E81C6 /* SectionsViewController.swift */; };
+		98B4507123F1B4B4008E81C6 /* SectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4507023F1B4B4008E81C6 /* SectionsViewModel.swift */; };
+		98B4507323F1B4F5008E81C6 /* SectionDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4507223F1B4F5008E81C6 /* SectionDetailsViewModel.swift */; };
+		98B4507523F1B516008E81C6 /* SectionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4507423F1B516008E81C6 /* SectionDetailsViewController.swift */; };
+		98B4507723F2A6FB008E81C6 /* SectionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4507623F2A6FB008E81C6 /* SectionDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		98B4502C23F16078008E81C6 /* Viaplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viaplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		98B4504423F1616E008E81C6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		98B4504723F1616E008E81C6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98B4504823F1616E008E81C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		98B4504B23F1616E008E81C6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,11 @@
 		98B4506523F19A7E008E81C6 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		98B4506723F19BA9008E81C6 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		98B4506A23F1B1EF008E81C6 /* Constant+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+URL.swift"; sourceTree = "<group>"; };
+		98B4506E23F1B48F008E81C6 /* SectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsViewController.swift; sourceTree = "<group>"; };
+		98B4507023F1B4B4008E81C6 /* SectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsViewModel.swift; sourceTree = "<group>"; };
+		98B4507223F1B4F5008E81C6 /* SectionDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailsViewModel.swift; sourceTree = "<group>"; };
+		98B4507423F1B516008E81C6 /* SectionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailsViewController.swift; sourceTree = "<group>"; };
+		98B4507623F2A6FB008E81C6 /* SectionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +88,8 @@
 		98B4504323F1616E008E81C6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				98B4504423F1616E008E81C6 /* ViewController.swift */,
+				98B4506C23F1B48F008E81C6 /* Section Details */,
+				98B4506D23F1B48F008E81C6 /* Sections */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -91,6 +100,7 @@
 				98B4506523F19A7E008E81C6 /* Link.swift */,
 				98B4506723F19BA9008E81C6 /* Root.swift */,
 				98B4506323F198CF008E81C6 /* Section.swift */,
+				98B4507623F2A6FB008E81C6 /* SectionDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +165,24 @@
 				98B4506A23F1B1EF008E81C6 /* Constant+URL.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		98B4506C23F1B48F008E81C6 /* Section Details */ = {
+			isa = PBXGroup;
+			children = (
+				98B4507423F1B516008E81C6 /* SectionDetailsViewController.swift */,
+				98B4507223F1B4F5008E81C6 /* SectionDetailsViewModel.swift */,
+			);
+			path = "Section Details";
+			sourceTree = "<group>";
+		};
+		98B4506D23F1B48F008E81C6 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				98B4506E23F1B48F008E81C6 /* SectionsViewController.swift */,
+				98B4507023F1B4B4008E81C6 /* SectionsViewModel.swift */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,14 +256,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98B4507123F1B4B4008E81C6 /* SectionsViewModel.swift in Sources */,
 				98B4505323F1616E008E81C6 /* AppDelegate.swift in Sources */,
 				98B4506823F19BA9008E81C6 /* Root.swift in Sources */,
 				98B4506623F19A7E008E81C6 /* Link.swift in Sources */,
+				98B4506F23F1B48F008E81C6 /* SectionsViewController.swift in Sources */,
 				98B4506B23F1B1EF008E81C6 /* Constant+URL.swift in Sources */,
 				98B4505C23F1687E008E81C6 /* DataManager.swift in Sources */,
-				98B4505023F1616E008E81C6 /* ViewController.swift in Sources */,
+				98B4507523F1B516008E81C6 /* SectionDetailsViewController.swift in Sources */,
 				98B4506423F198CF008E81C6 /* Section.swift in Sources */,
+				98B4507723F2A6FB008E81C6 /* SectionDetail.swift in Sources */,
 				98B4505423F1616E008E81C6 /* SceneDelegate.swift in Sources */,
+				98B4507323F1B4F5008E81C6 /* SectionDetailsViewModel.swift in Sources */,
 				98B4505A23F16478008E81C6 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
