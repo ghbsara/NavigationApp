@@ -14,6 +14,12 @@ class SectionViewModel {
     
     private var sections = [Section]()
     
+    // MARK: - Public Interfaces
+    
+    var sectionsCount: Int {
+        return sections.count
+    }
+    
     // MARK: - Methods
     
     func fetchSection(completion: @escaping (_ success: Bool) -> Void) {

@@ -23,6 +23,8 @@
 		98B4507323F1B4F5008E81C6 /* SectionDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4507223F1B4F5008E81C6 /* SectionDetailsViewModel.swift */; };
 		98B4507523F1B516008E81C6 /* SectionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4507423F1B516008E81C6 /* SectionDetailsViewController.swift */; };
 		98B4507723F2A6FB008E81C6 /* SectionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4507623F2A6FB008E81C6 /* SectionDetail.swift */; };
+		98B4507B23F2AE1B008E81C6 /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4507923F2AE1B008E81C6 /* SectionCell.swift */; };
+		98B4507C23F2AE1B008E81C6 /* SectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B4507A23F2AE1B008E81C6 /* SectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		98B4507223F1B4F5008E81C6 /* SectionDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailsViewModel.swift; sourceTree = "<group>"; };
 		98B4507423F1B516008E81C6 /* SectionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailsViewController.swift; sourceTree = "<group>"; };
 		98B4507623F2A6FB008E81C6 /* SectionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetail.swift; sourceTree = "<group>"; };
+		98B4507923F2AE1B008E81C6 /* SectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
+		98B4507A23F2AE1B008E81C6 /* SectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +185,18 @@
 			children = (
 				98B4506E23F1B48F008E81C6 /* SectionsViewController.swift */,
 				98B4507023F1B4B4008E81C6 /* SectionsViewModel.swift */,
+				98B4507823F2ADF5008E81C6 /* Cell */,
 			);
 			path = Sections;
+			sourceTree = "<group>";
+		};
+		98B4507823F2ADF5008E81C6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				98B4507923F2AE1B008E81C6 /* SectionCell.swift */,
+				98B4507A23F2AE1B008E81C6 /* SectionCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B4505123F1616E008E81C6 /* LaunchScreen.storyboard in Resources */,
+				98B4507C23F2AE1B008E81C6 /* SectionCell.xib in Resources */,
 				98B4505523F1616E008E81C6 /* Assets.xcassets in Resources */,
 				98B4505223F1616E008E81C6 /* Main.storyboard in Resources */,
 			);
@@ -265,6 +280,7 @@
 				98B4505C23F1687E008E81C6 /* DataManager.swift in Sources */,
 				98B4507523F1B516008E81C6 /* SectionDetailsViewController.swift in Sources */,
 				98B4506423F198CF008E81C6 /* Section.swift in Sources */,
+				98B4507B23F2AE1B008E81C6 /* SectionCell.swift in Sources */,
 				98B4507723F2A6FB008E81C6 /* SectionDetail.swift in Sources */,
 				98B4505423F1616E008E81C6 /* SceneDelegate.swift in Sources */,
 				98B4507323F1B4F5008E81C6 /* SectionDetailsViewModel.swift in Sources */,

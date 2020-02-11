@@ -30,10 +30,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Cx-Qr-6G6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gKr-VO-JhH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zSx-1y-4jt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1Cx-Qr-6G6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FGQ-e1-x9H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Cx-Qr-6G6" secondAttribute="trailing" id="IVw-kN-v3y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Cx-Qr-6G6" secondAttribute="bottom" id="aWW-Jo-KZE"/>
+                            <constraint firstItem="1Cx-Qr-6G6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bxj-j5-gWn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="4ws-Ys-qTF"/>
+                    <connections>
+                        <outlet property="tableView" destination="1Cx-Qr-6G6" id="sgz-S0-5PH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
