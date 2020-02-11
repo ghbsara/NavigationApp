@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SectionViewModel {
+class SectionsViewModel {
     
     // MARK: - Properties
     
@@ -28,6 +28,7 @@ class SectionViewModel {
                 return completion(false)
             }
             self?.sections = sections
+            completion(true)
         }
     }
     
