@@ -31,4 +31,9 @@ class SectionDetail: Decodable {
         title = try container.decode(String.self, forKey: .title)
         description = try container.decode(String.self, forKey: .description)
     }
+    
+    init(title: String, description: String) {
+        self.title = title
+        self.description = description
+    }
 }

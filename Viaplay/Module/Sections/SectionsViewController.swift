@@ -41,11 +41,15 @@ class SectionsViewController: UIViewController {
         
         progressIndicator.startAnimating()
         
-        viewModel.fetchSection { [weak self] (success) in
-            if success {
-                DispatchQueue.main.async {
+        viewModel.fetchSections { [weak self] (success, error) in
+            DispatchQueue.main.async {
+                self?.progressIndicator.stopAnimating()
+                if success {
                     self?.tableView.reloadData()
-                    self?.progressIndicator.stopAnimating()
+                    
+                } else {
+                    // Show network error if there is no data in DB
+                    self?.showNetworkAlert()
                 }
             }
         }
@@ -102,12 +106,16 @@ extension SectionsViewController: UITableViewDelegate {
         progressIndicator.startAnimating()
         
         // Fetch Section details, and show details screen
-        viewModel.fetchSectionDetail(forSection: item) { [weak self] (success) in
-            if success {
-                DispatchQueue.main.async {
-                    self?.progressIndicator.stopAnimating()
+        viewModel.fetchSectionDetail(forSection: item) { [weak self] (success, error) in
+            DispatchQueue.main.async {
+                self?.progressIndicator.stopAnimating()
+                if success {
+                    
                     let viewController = SectionDetailsViewController.instantiate(viewModel: SectionDetailsViewModel(section: item))
                     self?.navigationController?.pushViewController(viewController, animated: true)
+                } else {
+                    // Show network error if there is no data in DB
+                    self?.showNetworkAlert()
                 }
             }
         }

@@ -8,40 +8,62 @@
 
 import Foundation
 
+enum URLParameter: String {
+    case dtg = "{?dtg}"
+}
+
 class DataManager {
     
     static let shared = DataManager()
     
-    func getSections(completionHandler: @escaping (_ sections: [Section]?) -> Void) {
+    func getSections(completionHandler: @escaping (_ sections: [Section]?,_ error: Error?) -> Void) {
         
         Networking.fetchData(urlString: viaplayURL) { (data, error) in
-            guard let data = data else {
-                return completionHandler(nil)
-            }
             
-            do {
-                let root = try JSONDecoder().decode(Root.self, from: data)
-                completionHandler(root.link?.sections)
-            } catch {
-               print("error")
-               completionHandler(nil)
+            if let _ = error {
+                SQLiteManager.shared.fetchSections { (sections, error) in
+                    completionHandler(sections, error)
+                }
+            } else {
+                guard let data = data else {
+                    return completionHandler(nil, nil)
+                }
+                
+                do {
+                    let root = try JSONDecoder().decode(Root.self, from: data)
+                    completionHandler(root.link?.sections, nil)
+                    guard let sections = root.link?.sections else { return }
+                    SQLiteManager.shared.createDataBase()
+                    SQLiteManager.shared.insertSections(sections: sections)
+                    
+                } catch {
+                    print("error")
+                    completionHandler(nil, error)
+                }
             }
         }
     }
     
-    func getSectionDetail(sectionURL: String, completionHandler: @escaping (_ section: SectionDetail?) -> Void) {
+    func getSectionDetail(section: Section, completionHandler: @escaping (_ section: SectionDetail?, _ error: Error?) -> Void) {
         
-        Networking.fetchData(urlString: sectionURL) { (data, error) in
+        guard let sectionURL = section.urlString else {
+            return completionHandler(nil, nil)
+        }
+        // Remove {?dtg} tag from URL
+        let sectionDetailURL = sectionURL.deletingSuffix(URLParameter.dtg.rawValue)
+        
+        Networking.fetchData(urlString: sectionDetailURL) { (data, error) in
             guard let data = data else {
-                return completionHandler(nil)
+                return completionHandler(nil, error)
             }
             
             do {
                 let sectionDetail = try JSONDecoder().decode(SectionDetail.self, from: data)
-                completionHandler(sectionDetail)
+                completionHandler(sectionDetail, error)
+                SQLiteManager.shared.updateSection(section: section)
             } catch {
-               print("error")
-               completionHandler(nil)
+                print("error")
+                completionHandler(nil, error)
             }
         }
     }

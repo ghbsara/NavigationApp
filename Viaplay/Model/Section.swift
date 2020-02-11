@@ -35,4 +35,13 @@ class Section: Decodable {
         title = try container.decode(String.self, forKey: .title)
         urlString = try container.decode(String.self, forKey: .urlString)
     }
+    
+    init(id: String, page: String, urlString: String, title: String, description: String) {
+        self.id = id
+        self.title = page
+        self.urlString = urlString
+        if !title.isEmpty && !description.isEmpty {
+            sectionDetail = SectionDetail(title: title, description: description)
+        }
+    }
 }
