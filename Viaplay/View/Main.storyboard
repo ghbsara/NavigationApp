@@ -63,5 +63,96 @@
             </objects>
             <point key="canvasLocation" x="-477" y="48"/>
         </scene>
+        <!--Section Details View Controller-->
+        <scene sceneID="XHy-V2-gZC">
+            <objects>
+                <viewController storyboardIdentifier="SectionDetailsViewController" id="5I2-Kb-S3B" customClass="SectionDetailsViewController" customModule="Viaplay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Qa-ka-lfc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXW-8y-FyY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enK-XN-OC3">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="231"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="Xb6-mO-ae4">
+                                                <rect key="frame" x="25" y="20" width="364" height="191"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uVj-f3-0en">
+                                                        <rect key="frame" x="0.0" y="0.0" width="364" height="68"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gis-dp-Sl0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="364" height="27.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNO-me-gT0">
+                                                                <rect key="frame" x="0.0" y="47.5" width="364" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-Ku-FBQ">
+                                                        <rect key="frame" x="0.0" y="123" width="364" height="68"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsA-7b-dIG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="364" height="27.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSj-8R-3qb">
+                                                                <rect key="frame" x="0.0" y="47.5" width="364" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Xb6-mO-ae4" firstAttribute="leading" secondItem="enK-XN-OC3" secondAttribute="leading" constant="25" id="8E1-vc-15P"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xb6-mO-ae4" secondAttribute="bottom" constant="20" id="KV9-Nn-Sin"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xb6-mO-ae4" secondAttribute="trailing" constant="25" id="bK2-cn-1By"/>
+                                            <constraint firstItem="Xb6-mO-ae4" firstAttribute="top" secondItem="enK-XN-OC3" secondAttribute="top" constant="20" id="j1k-lM-PtQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="enK-XN-OC3" firstAttribute="width" secondItem="UXW-8y-FyY" secondAttribute="width" id="7Bd-h2-94F"/>
+                                    <constraint firstItem="enK-XN-OC3" firstAttribute="height" secondItem="UXW-8y-FyY" secondAttribute="height" priority="250" id="9Vh-cn-Ak0"/>
+                                    <constraint firstAttribute="trailing" secondItem="enK-XN-OC3" secondAttribute="trailing" id="F8D-ma-P8d"/>
+                                    <constraint firstItem="enK-XN-OC3" firstAttribute="leading" secondItem="UXW-8y-FyY" secondAttribute="leading" id="PxW-K9-gft"/>
+                                    <constraint firstAttribute="bottom" secondItem="enK-XN-OC3" secondAttribute="bottom" id="dTy-o0-K4M"/>
+                                    <constraint firstItem="enK-XN-OC3" firstAttribute="top" secondItem="UXW-8y-FyY" secondAttribute="top" id="tex-CK-eBi"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hQw-OB-kC6" firstAttribute="bottom" secondItem="UXW-8y-FyY" secondAttribute="bottom" id="K9E-qB-Au7"/>
+                            <constraint firstItem="UXW-8y-FyY" firstAttribute="top" secondItem="hQw-OB-kC6" secondAttribute="top" id="iFw-gZ-xQO"/>
+                            <constraint firstItem="UXW-8y-FyY" firstAttribute="leading" secondItem="hQw-OB-kC6" secondAttribute="leading" id="mOo-n0-rxI"/>
+                            <constraint firstItem="hQw-OB-kC6" firstAttribute="trailing" secondItem="UXW-8y-FyY" secondAttribute="trailing" id="uLH-z6-2xl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hQw-OB-kC6"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="NSj-8R-3qb" id="ANx-gV-5NB"/>
+                        <outlet property="titleLabel" destination="PNO-me-gT0" id="AdX-Rn-o1p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Abz-MC-X7L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.69565217391306" y="45.535714285714285"/>
+        </scene>
     </scenes>
 </document>

@@ -37,6 +37,8 @@ class SectionsViewController: UIViewController {
     
     private func updateUI() {
         
+        navigationController?.navigationBar.topItem?.title = "Sections"
+        
         progressIndicator.startAnimating()
         
         viewModel.fetchSection { [weak self] (success) in
@@ -62,13 +64,13 @@ extension SectionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let section = viewModel.section(forIndex: indexPath.row)
-        let cell = configureStationCell(item: section)
+        let cell = configureSectionCell(item: section)
         return cell
     }
     
     // MARK: - Local Helpers
     
-    private func configureStationCell(item: Section) -> UITableViewCell {
+    private func configureSectionCell(item: Section) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SectionCell.reuseIdentifier) as? SectionCell else {
             return UITableViewCell()
@@ -84,35 +86,30 @@ extension SectionsViewController: UITableViewDataSource {
 
 extension SectionsViewController: UITableViewDelegate {
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        guard let viewModel = viewModel else { return }
-//
-//        // Get the selected item
-//        let selectedItem = viewModel.items[indexPath.row]
-//
-//        // Switch on Sections
-//        switch selectedItem.type {
-//        case .hours:
-//            handleStationHoursTap(selectedItem, indexPath)
-//        default:
-//            break
-//        }
-//    }
-//
-//    // MARK: - Local Helpers
-//
-//    fileprivate func handleStationHoursTap(_ item: StationDetailsModelItem, _ indexPath: IndexPath) {
-//
-//        guard let cell = tableView.cellForRow(at: indexPath) as? StationHoursCell else {
-//            return
-//        }
-//        self.currentScrollPosition = self.tableView.contentOffset.y
-//        tableView.beginUpdates()
-//        cell.isExpended.toggle()
-//        tableView.endUpdates()
-//        self.currentScrollPosition = nil
-//        self.tableView.layoutIfNeeded()
-//        tableView.scrollToRow(at: IndexPath(row: indexPath.row, section: 0), at: .middle, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Get the selected item
+        let selectedItem = viewModel.section(forIndex: indexPath.row)
+        
+        // Show SectionDetails screen
+        handleSectionTap(selectedItem)
+    }
+    
+    // MARK: - Local Helpers
+    
+    private func handleSectionTap(_ item: Section) {
+        
+        progressIndicator.startAnimating()
+        
+        // Fetch Section details, and show details screen
+        viewModel.fetchSectionDetail(forSection: item) { [weak self] (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self?.progressIndicator.stopAnimating()
+                    let viewController = SectionDetailsViewController.instantiate(viewModel: SectionDetailsViewModel(section: item))
+                    self?.navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
+        }
+    }
 }

@@ -7,3 +7,31 @@
 //
 
 import Foundation
+
+class SectionDetailsViewModel {
+    
+    // MARK: - Properties
+    
+    private var section: Section
+    
+    // MARK: - Public Interfaces
+    
+    var sectionName: String {
+        return section.title ?? ""
+    }
+    
+    var title: String {
+        return section.sectionDetail?.title ?? ""
+    }
+    
+    var description: String {
+        return section.sectionDetail?.description ?? ""
+    }
+    
+    // MARK: - Init
+    
+    init(section: Section) {
+        self.section = section
+    }
+    
+}
