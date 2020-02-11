@@ -12,6 +12,7 @@ class Section: Decodable {
     
     // MARK: - Properties
     
+    let id: String?
     let title: String?
     let urlString: String?
     var sectionDetail: SectionDetail?
@@ -19,8 +20,9 @@ class Section: Decodable {
     // MARK: - CodingKeys
     
     enum CodingKeys: String, CodingKey {
-        case urlString = "href"
+        case id
         case title
+        case urlString = "href"
     }
     
     // MARK: - Init
@@ -29,6 +31,7 @@ class Section: Decodable {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
+        id = try container.decode(String.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
         urlString = try container.decode(String.self, forKey: .urlString)
     }
