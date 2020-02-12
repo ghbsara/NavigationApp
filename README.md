@@ -1,11 +1,11 @@
 # Navigation App
 
-● Fetch all sections returned from the API
-● Save sections in local database 
-● If you select a section, the app will send a request to get all details for this specific section, and will save it in our local data base.
-● If the app is offline, there are two scenarios:
-- If we have all data in our local data base , the app will display it .
-- If not , the app will show a network error. 
+- Fetch all sections returned from the API
+- Save sections in local database 
+- If you select a section, the app will send a request to get all details for this specific section, and will save it in our local data base.
+- If the app is offline, there are two scenarios:
+  - If we have all data in our local data base , the app will display it .
+  - If not , the app will show a network error. 
 
 # Tools
 
