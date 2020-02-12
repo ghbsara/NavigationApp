@@ -31,6 +31,7 @@
 		98B450BC23F33A21008E81C6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450BB23F33A21008E81C6 /* UIViewController+Extension.swift */; };
 		98B450BF23F3F3AA008E81C6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450BE23F3F3A9008E81C6 /* Reachability.swift */; };
 		98B450C723F3FBBF008E81C6 /* ViaplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450C623F3FBBF008E81C6 /* ViaplayTests.swift */; };
+		98B450CF23F3FEF6008E81C6 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450CE23F3FEF6008E81C6 /* DataManagerTests.swift */; };
 		D7A9658884BD9BA5C2DEEB14 /* Pods_Viaplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F66537CB3ED8AE96C5D0A8 /* Pods_Viaplay.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		98B450C423F3FBBF008E81C6 /* ViaplayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViaplayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B450C623F3FBBF008E81C6 /* ViaplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplayTests.swift; sourceTree = "<group>"; };
 		98B450C823F3FBBF008E81C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98B450CE23F3FEF6008E81C6 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		DC714887CCD32F37472B313C /* Pods-Viaplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viaplay.debug.xcconfig"; path = "Target Support Files/Pods-Viaplay/Pods-Viaplay.debug.xcconfig"; sourceTree = "<group>"; };
 		E6F66537CB3ED8AE96C5D0A8 /* Pods_Viaplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viaplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -288,6 +290,7 @@
 		98B450C523F3FBBF008E81C6 /* ViaplayTests */ = {
 			isa = PBXGroup;
 			children = (
+				98B450CE23F3FEF6008E81C6 /* DataManagerTests.swift */,
 				98B450C623F3FBBF008E81C6 /* ViaplayTests.swift */,
 				98B450C823F3FBBF008E81C6 /* Info.plist */,
 			);
@@ -467,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B450C723F3FBBF008E81C6 /* ViaplayTests.swift in Sources */,
+				98B450CF23F3FEF6008E81C6 /* DataManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

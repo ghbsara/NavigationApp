@@ -22,12 +22,12 @@ class NetworkingTests: XCTestCase {
         // Create an expectation
         let expectation = self.expectation(description: "FetchSections")
         var sectionData: Data?
-  
+        
         Networking.fetchData(urlString: viaplayURL) { (data, error) in
             sectionData = data
             expectation.fulfill()
         }
-       
+        
         // Wait for expectation to be fullfilled or time out
         waitForExpectations(timeout: 8, handler: nil)
         
@@ -36,20 +36,20 @@ class NetworkingTests: XCTestCase {
     }
     
     func testFailedFetchData() {
-          
-          // Create an expectation
-          let expectation = self.expectation(description: "FetchSections")
-          var viaplayError: ViaplayError?
-    
-          Networking.fetchData(urlString: "content.viaplay.se/ios-se-wrongAPI") { (data, error) in
-              viaplayError = error
-              expectation.fulfill()
-          }
-         
-          // Wait for expectation to be fullfilled or time out
-          waitForExpectations(timeout: 8, handler: nil)
-          
-
+        
+        // Create an expectation
+        let expectation = self.expectation(description: "FetchSections")
+        var viaplayError: ViaplayError?
+        
+        Networking.fetchData(urlString: "content.viaplay.se/ios-se-wrongAPI") { (data, error) in
+            viaplayError = error
+            expectation.fulfill()
+        }
+        
+        // Wait for expectation to be fullfilled or time out
+        waitForExpectations(timeout: 8, handler: nil)
+        
+        
         XCTAssertNotNil(viaplayError)
-      }
+    }
 }
