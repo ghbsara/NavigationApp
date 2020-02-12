@@ -16,7 +16,7 @@ class DataManager {
     
     static let shared = DataManager()
     
-    func getSections(completionHandler: @escaping (_ sections: [Section]?,_ error: Error?) -> Void) {
+    func getSections(completionHandler: @escaping (_ sections: [Section]?,_ error: ViaplayError?) -> Void) {
         
         Networking.fetchData(urlString: viaplayURL) { (data, error) in
             
@@ -38,13 +38,13 @@ class DataManager {
                     
                 } catch {
                     print("error")
-                    completionHandler(nil, error)
+                    completionHandler(nil, .sqLiteError)
                 }
             }
         }
     }
     
-    func getSectionDetail(section: Section, completionHandler: @escaping (_ section: SectionDetail?, _ error: Error?) -> Void) {
+    func getSectionDetail(section: Section, completionHandler: @escaping (_ section: SectionDetail?, _ error: ViaplayError?) -> Void) {
         
         guard let sectionURL = section.urlString else {
             return completionHandler(nil, nil)
@@ -63,7 +63,7 @@ class DataManager {
                 SQLiteManager.shared.updateSection(section: section)
             } catch {
                 print("error")
-                completionHandler(nil, error)
+                completionHandler(nil, .sqLiteError)
             }
         }
     }

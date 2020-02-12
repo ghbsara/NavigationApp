@@ -10,8 +10,12 @@ import UIKit
 
 extension UIViewController {
     
-    func showNetworkAlert() {
-        let alert = UIAlertController(title: "Network Error", message: "The network is currently unavailable. Please check your cellular network settings, or try again later.", preferredStyle: .alert)
+    func showAlert(forError error: ViaplayError) {
+        var message = "Please try again later."
+        if error == .networkError {
+            message = "The network is currently unavailable. Please check your cellular network settings, or try again later."
+        }
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

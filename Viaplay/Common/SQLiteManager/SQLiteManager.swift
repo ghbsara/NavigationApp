@@ -13,9 +13,9 @@ class SQLiteManager {
     static var shared = SQLiteManager()
     
     private var db: Connection?
-    private var dbPath = NSSearchPathForDirectoriesInDomains(
+    private var dbPath = (NSSearchPathForDirectoriesInDomains(
         .documentDirectory, .userDomainMask, true
-    ).first! + "/viaplay.sqlite3"
+        ).first ?? "") + "/viaplay.sqlite3"
     private let sectionsTable = Table("sections")
     private let id = Expression<String>("id")
     private let page = Expression<String>("page")
@@ -70,13 +70,13 @@ class SQLiteManager {
         }
     }
     
-    func fetchSections(completion: @escaping (_ sections: [Section]?,_ error: Error?) -> Void) {
+    func fetchSections(completion: @escaping (_ sections: [Section]?,_ error: ViaplayError?) -> Void) {
         
         if db == nil {
             do {
                 db = try Connection(dbPath)
             } catch {
-                completion(nil, error)
+                completion(nil, .sqLiteError)
                 print("Connection Error")
             }
         }
@@ -91,7 +91,7 @@ class SQLiteManager {
             }
             completion(sections, nil)
         } catch {
-            completion(nil, error)
+            completion(nil, .sqLiteError)
             print("Fetch data failed: \(error)")
         }
     }

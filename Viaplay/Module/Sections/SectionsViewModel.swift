@@ -22,7 +22,7 @@ class SectionsViewModel {
     
     // MARK: - Methods
     
-    func fetchSections(completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
+    func fetchSections(completion: @escaping (_ success: Bool, _ error: ViaplayError?) -> Void) {
         DataManager.shared.getSections { [weak self] (sections, error) in
             guard let sections = sections else {
                 return completion(false, error)
@@ -32,7 +32,7 @@ class SectionsViewModel {
         }
     }
     
-    func fetchSectionDetail(forSection section: Section, completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
+    func fetchSectionDetail(forSection section: Section, completion: @escaping (_ success: Bool, _ error: ViaplayError?) -> Void) {
         
         // If we already have sectionDetail, we don't need to fetch it again
         if let _ = section.sectionDetail {

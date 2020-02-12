@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzA-ng-mr6">
-                        <rect key="frame" x="8" y="2" width="304" height="55"/>
+                        <rect key="frame" x="12" y="2" width="300" height="55"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="K0u-K8-Er4"/>
                         </constraints>
@@ -28,7 +28,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="MzA-ng-mr6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="JFt-gX-gdr"/>
-                    <constraint firstItem="MzA-ng-mr6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="KO5-CZ-qSH"/>
+                    <constraint firstItem="MzA-ng-mr6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="KO5-CZ-qSH"/>
                     <constraint firstAttribute="bottom" secondItem="MzA-ng-mr6" secondAttribute="bottom" constant="1" id="XAc-ni-WOl"/>
                     <constraint firstAttribute="trailing" secondItem="MzA-ng-mr6" secondAttribute="trailing" constant="8" id="hzN-DG-xZN"/>
                 </constraints>

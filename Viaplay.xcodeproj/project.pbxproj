@@ -29,6 +29,7 @@
 		98B4508123F2BC7A008E81C6 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4508023F2BC7A008E81C6 /* UIStoryboard+Extension.swift */; };
 		98B450BA23F2EFDE008E81C6 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450B923F2EFDE008E81C6 /* SQLiteManager.swift */; };
 		98B450BC23F33A21008E81C6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450BB23F33A21008E81C6 /* UIViewController+Extension.swift */; };
+		98B450BF23F3F3AA008E81C6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450BE23F3F3A9008E81C6 /* Reachability.swift */; };
 		D7A9658884BD9BA5C2DEEB14 /* Pods_Viaplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F66537CB3ED8AE96C5D0A8 /* Pods_Viaplay.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		98B4508023F2BC7A008E81C6 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		98B450B923F2EFDE008E81C6 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		98B450BB23F33A21008E81C6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		98B450BE23F3F3A9008E81C6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DC714887CCD32F37472B313C /* Pods-Viaplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viaplay.debug.xcconfig"; path = "Target Support Files/Pods-Viaplay/Pods-Viaplay.debug.xcconfig"; sourceTree = "<group>"; };
 		E6F66537CB3ED8AE96C5D0A8 /* Pods_Viaplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viaplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 				98B4505723F16456008E81C6 /* DataManager */,
 				98B4507D23F2B911008E81C6 /* Extension */,
 				98B4505823F16456008E81C6 /* Networking */,
+				98B450BD23F3F386008E81C6 /* Reachability */,
 				98B450B823F2EFCA008E81C6 /* SQLiteManager */,
 			);
 			path = Common;
@@ -249,6 +252,14 @@
 				98B450B923F2EFDE008E81C6 /* SQLiteManager.swift */,
 			);
 			path = SQLiteManager;
+			sourceTree = "<group>";
+		};
+		98B450BD23F3F386008E81C6 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				98B450BE23F3F3A9008E81C6 /* Reachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +380,7 @@
 			files = (
 				98B450BC23F33A21008E81C6 /* UIViewController+Extension.swift in Sources */,
 				98B4507123F1B4B4008E81C6 /* SectionsViewModel.swift in Sources */,
+				98B450BF23F3F3AA008E81C6 /* Reachability.swift in Sources */,
 				98B4505323F1616E008E81C6 /* AppDelegate.swift in Sources */,
 				98B4506823F19BA9008E81C6 /* Root.swift in Sources */,
 				98B4506623F19A7E008E81C6 /* Link.swift in Sources */,

@@ -49,7 +49,8 @@ class SectionsViewController: UIViewController {
                     
                 } else {
                     // Show network error if there is no data in DB
-                    self?.showNetworkAlert()
+                    guard let error = error else { return }
+                    self?.showAlert(forError: error)
                 }
             }
         }
@@ -115,7 +116,8 @@ extension SectionsViewController: UITableViewDelegate {
                     self?.navigationController?.pushViewController(viewController, animated: true)
                 } else {
                     // Show network error if there is no data in DB
-                    self?.showNetworkAlert()
+                    guard let error = error else { return }
+                    self?.showAlert(forError: error)
                 }
             }
         }
