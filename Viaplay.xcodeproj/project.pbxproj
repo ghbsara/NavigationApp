@@ -30,8 +30,19 @@
 		98B450BA23F2EFDE008E81C6 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450B923F2EFDE008E81C6 /* SQLiteManager.swift */; };
 		98B450BC23F33A21008E81C6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450BB23F33A21008E81C6 /* UIViewController+Extension.swift */; };
 		98B450BF23F3F3AA008E81C6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450BE23F3F3A9008E81C6 /* Reachability.swift */; };
+		98B450C723F3FBBF008E81C6 /* ViaplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B450C623F3FBBF008E81C6 /* ViaplayTests.swift */; };
 		D7A9658884BD9BA5C2DEEB14 /* Pods_Viaplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F66537CB3ED8AE96C5D0A8 /* Pods_Viaplay.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		98B450C923F3FBBF008E81C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98B4502423F16078008E81C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98B4502B23F16078008E81C6;
+			remoteInfo = Viaplay;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0E47BC1E96DB73529B2B4227 /* Pods-Viaplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viaplay.release.xcconfig"; path = "Target Support Files/Pods-Viaplay/Pods-Viaplay.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +71,9 @@
 		98B450B923F2EFDE008E81C6 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		98B450BB23F33A21008E81C6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		98B450BE23F3F3A9008E81C6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		98B450C423F3FBBF008E81C6 /* ViaplayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViaplayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98B450C623F3FBBF008E81C6 /* ViaplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplayTests.swift; sourceTree = "<group>"; };
+		98B450C823F3FBBF008E81C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC714887CCD32F37472B313C /* Pods-Viaplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viaplay.debug.xcconfig"; path = "Target Support Files/Pods-Viaplay/Pods-Viaplay.debug.xcconfig"; sourceTree = "<group>"; };
 		E6F66537CB3ED8AE96C5D0A8 /* Pods_Viaplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viaplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,6 +84,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7A9658884BD9BA5C2DEEB14 /* Pods_Viaplay.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98B450C123F3FBBF008E81C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				98B4502E23F16078008E81C6 /* Viaplay */,
+				98B450C523F3FBBF008E81C6 /* ViaplayTests */,
 				98B4502D23F16078008E81C6 /* Products */,
 				8DEDB66B12E3C3351D2CC661 /* Pods */,
 				78B5EC79BB0D9E152880FAFE /* Frameworks */,
@@ -107,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				98B4502C23F16078008E81C6 /* Viaplay.app */,
+				98B450C423F3FBBF008E81C6 /* ViaplayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +285,15 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		98B450C523F3FBBF008E81C6 /* ViaplayTests */ = {
+			isa = PBXGroup;
+			children = (
+				98B450C623F3FBBF008E81C6 /* ViaplayTests.swift */,
+				98B450C823F3FBBF008E81C6 /* Info.plist */,
+			);
+			path = ViaplayTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +316,24 @@
 			productReference = 98B4502C23F16078008E81C6 /* Viaplay.app */;
 			productType = "com.apple.product-type.application";
 		};
+		98B450C323F3FBBF008E81C6 /* ViaplayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98B450CB23F3FBBF008E81C6 /* Build configuration list for PBXNativeTarget "ViaplayTests" */;
+			buildPhases = (
+				98B450C023F3FBBF008E81C6 /* Sources */,
+				98B450C123F3FBBF008E81C6 /* Frameworks */,
+				98B450C223F3FBBF008E81C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98B450CA23F3FBBF008E81C6 /* PBXTargetDependency */,
+			);
+			name = ViaplayTests;
+			productName = ViaplayTests;
+			productReference = 98B450C423F3FBBF008E81C6 /* ViaplayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -296,6 +346,10 @@
 				TargetAttributes = {
 					98B4502B23F16078008E81C6 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					98B450C323F3FBBF008E81C6 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 98B4502B23F16078008E81C6;
 					};
 				};
 			};
@@ -313,6 +367,7 @@
 			projectRoot = "";
 			targets = (
 				98B4502B23F16078008E81C6 /* Viaplay */,
+				98B450C323F3FBBF008E81C6 /* ViaplayTests */,
 			);
 		};
 /* End PBXProject section */
@@ -326,6 +381,13 @@
 				98B4507C23F2AE1B008E81C6 /* SectionCell.xib in Resources */,
 				98B4505523F1616E008E81C6 /* Assets.xcassets in Resources */,
 				98B4505223F1616E008E81C6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98B450C223F3FBBF008E81C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +462,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		98B450C023F3FBBF008E81C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98B450C723F3FBBF008E81C6 /* ViaplayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		98B450CA23F3FBBF008E81C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98B4502B23F16078008E81C6 /* Viaplay */;
+			targetProxy = 98B450C923F3FBBF008E81C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		98B4503E23F1607C008E81C6 /* Debug */ = {
@@ -553,6 +631,44 @@
 			};
 			name = Release;
 		};
+		98B450CC23F3FBBF008E81C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViaplayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sara.ViaplayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viaplay.app/Viaplay";
+			};
+			name = Debug;
+		};
+		98B450CD23F3FBBF008E81C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViaplayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sara.ViaplayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viaplay.app/Viaplay";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -570,6 +686,15 @@
 			buildConfigurations = (
 				98B4504123F1607C008E81C6 /* Debug */,
 				98B4504223F1607C008E81C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98B450CB23F3FBBF008E81C6 /* Build configuration list for PBXNativeTarget "ViaplayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98B450CC23F3FBBF008E81C6 /* Debug */,
+				98B450CD23F3FBBF008E81C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
